@@ -32,6 +32,9 @@
       <li class="nav-item">
         <%= link_to "Sign Up", new_user_registration_path, class:"nav-link" %>
       </li>
+      <li class="nav-item">
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-secondary float-right" %>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">

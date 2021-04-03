@@ -1,5 +1,6 @@
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <%# <img class="mb-4" src="" alt="" width="72" height="72"> %>
+<section class="form-auth text-center" >
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), class: "form-auth" ) do |f| %>
+  <%# <img class="mb-4" src="" alt="" width="100"> %>
   <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
   <label for="inputEmail" class="sr-only">Email address</label>
   <%= f.email_field :email, autofocus: true, class: "form-control",id:"inputEmail", placeholder: "Email address", autocomplete: "current-email" %>
@@ -17,7 +18,7 @@
  <% end %> 
 
   <%= render "devise/shared/links"  %> 
-
+</section>
 <%# <h2>Log in</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>

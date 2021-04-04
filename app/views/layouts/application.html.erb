@@ -13,11 +13,14 @@
   </head>
 
   <body>
+    <% if["home","devise"].include?(controller.controller_name) %>
     <header>
-      <%= render 'shared/navbar1' %>
+      <%= render 'layouts/nav/navbar1' %>
     </header>
-    <%= render 'shared/flashes' %>
-
+    <% else %>
+      <%= render 'layouts/nav/dashboard' %>
+      <%= render 'shared/flashes' %>
+    <% end %>
     <%= yield %>
     
     <%= render"shared/footer" %>

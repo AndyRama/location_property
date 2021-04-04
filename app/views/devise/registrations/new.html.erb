@@ -1,25 +1,26 @@
 <section class="form-auth text-center">
+<h2>Please Sign Up</h2>
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
 
     <div class="form-inputs">
       <%= f.input :first_name,
                   required: true,
-                  input_html: { autocomplete: "first_name", placehoder:"Andy" }%>
+                  input_html: { autocomplete: "first_name", placeholder:"Andy" }%>
       <%= f.input :last_name,
                   required: true,
-                  input_html: { autocomplete: "last_name", placehoder:"Ramaroson" }%>
+                  input_html: { autocomplete: "last_name", placeholder:"Ramaroson" }%>
       <%= f.input :email,
                   required: true,
                   autofocus: true,
-                  input_html: { autocomplete: "email" }%>
+                  input_html: { autocomplete: "email", placeholder: "andy@gmail.com" }%>
       <%= f.input :password,
                   required: true,
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password",class:"form-control" } %>
+                  input_html: { autocomplete: "new-password",class:"form-control" ,placeholder: "xxxxxxxx"} %>
       <%= f.input :password_confirmation,
                   required: true,
-                  input_html: { autocomplete: "new-password" } %>
+                  input_html: { autocomplete: "new-password",placeholder: "xxxxxxxx" } %>
     </div>
 
     <div class="form-actions">

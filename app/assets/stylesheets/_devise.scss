@@ -21,7 +21,19 @@
   .form-control:focus {
     z-index: 2;
   }
-
+  
+  input[type="first-name"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  
+  }
+  
+  input[type="last-name"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
   input[type="email"] {
     margin-bottom: -1px;
     border-bottom-right-radius: 0;

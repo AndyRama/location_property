@@ -12,8 +12,8 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
- <body>
-    <% if ["public","devise"].include?(controller.controller_name) %>
+  <body id="<%= controller.controller_name %>" class= "<%=controller.action_name%>">
+    <% if ["public","devise","sessions"].include?(controller.controller_name) %>
     <header>
 <     <%= render "layouts/nav/public"%>
       <%= yield %>  

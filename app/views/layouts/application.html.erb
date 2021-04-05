@@ -14,21 +14,21 @@
 
  <body>
     <% if ["dashboard","devise"].include?(controller.controller_name) %>
-
-    <div class="container-fluid">
-      <div class="row">
-        <%= render "layouts/nav/dashboard"%>
-        <%= render "layouts/nav/sidebar" %> 
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 mt-4">       
-          <%= yield %>
-        </main> 
-      </div>
-    </div>  
+      <%= render "layouts/nav/dashboard"%>
+      <div class="container-fluid">
+        <div class="row">
+          <%= render "layouts/nav/sidebar" %> 
+          <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 mt-4">       
+            <%= yield %>
+          </main> 
+        </div>
+      </div>  
     <% else %>
-      <header>
- <      <%= render "layouts/nav/home"%>
-          <%= yield %>  
-      </header>
+    <header>
+<     <%= render "layouts/nav/home"%>
+      <%= yield %>  
+    </header>
+
     <% end %>
     
     <%#= render"shared/footer" %>

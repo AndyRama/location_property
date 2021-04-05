@@ -1,6 +1,7 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :create, :destroy]
+  before_action :authenticate_user!  , only: [:new, :create, :destroy]
+  # before_action :set_sidebar, except: [:show]
 
   def index
     @properties = Property.all
@@ -18,14 +19,15 @@ class PropertiesController < ApplicationController
 
   def create
     @property = Property.new(property_params)
-    @property.user_id = current_user_id
+    @property.user_id = current_user.id
+
     respond_to do |format|
       if @property.save
         format.html { redirect_to @property, notice: 'property was successfully created.'}
         format.json { render :show, status: :created, location: @property}
       else
         format.html {render :new}
-        format.json { render json: @property.errors, status: :unprocessable_entity}
+        format.json { render json: @property.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -49,5 +51,14 @@ class PropertiesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  private
+  
+  def set_property
+    @property = Property.find(params[:id])
+  end
 
+  def property_params
+    params.require(:property).permit(:name, :address, :price, :rooms, :bathrooms, :details, :parking_spaces, :photo, :for_sale, :status, :available_date)
+  end
 end

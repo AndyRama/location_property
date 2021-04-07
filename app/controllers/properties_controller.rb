@@ -22,7 +22,7 @@ class PropertiesController < ApplicationController
     @property.user_id = current_user.id
 
     respond_to do |format|
-      if @property.save
+      if @property.save!
         format.html { redirect_to @property, notice: 'property was successfully created.'}
         format.json { render :show, status: :created, location: @property}
       else
@@ -51,7 +51,12 @@ class PropertiesController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+    
+  #response to script
+  respond_to do |format|
+    format.json { head :no_content }
+  end
+    
   private
   
   def set_property
@@ -59,6 +64,6 @@ class PropertiesController < ApplicationController
   end
 
   def property_params
-    params.require(:property).permit(:name, :address, :price, :rooms, :bathrooms, :details, :parking_spaces, :photo, :for_sale, :status, :available_date)
+    params.require(:property).permit(:name, :address, :price, :rooms, :bathrooms, :details, :parking_spaces, :photo, :photo_cache, :for_sale, :status, :available_date)
   end
 end

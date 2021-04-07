@@ -4,7 +4,7 @@ class PublicController < ApplicationController
       path = current_user.admin? ? user_path : properties_path      
     end
     
-    @properties = Property.last
+    @properties = Property.latest
   
   end
 end

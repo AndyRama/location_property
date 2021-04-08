@@ -1,7 +1,7 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!  , only: [:new, :create, :destroy]
-  # before_action :set_sidebar, except: [:show]
+  before_action :set_sidebar, except: [:show]
 
   def index
     @properties = Property.all
@@ -51,16 +51,20 @@ class PropertiesController < ApplicationController
       format.json { head :no_content }
     end
   end
-    
+
   #response to script
   respond_to do |format|
     format.json { head :no_content }
   end
-    
+
   private
-  
+
   def set_property
     @property = Property.find(params[:id])
+  end
+ 
+  def set_sidebar
+    @show_sidebar = true
   end
 
   def property_params

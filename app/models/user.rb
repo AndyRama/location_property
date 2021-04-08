@@ -6,10 +6,14 @@ class User < ApplicationRecord
 
   has_many :properties
 
-  mount_uploader :photos , PhotoUploader
+  mount_uploader :photos, PhotoUploader
   serialize :photos, JSON # If you use SQLite, add this line.
 
   def full_name
-    "#{first_name} #{last_name}" 
-  end  
+    "#{first_name} #{last_name}"
+  end
+
+  def company
+    "test company"
+  end
 end

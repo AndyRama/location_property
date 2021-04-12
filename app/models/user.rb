@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :properties
+  # has_one_attached :image
+  # has_one_attached :cover_image
 
   mount_uploader :photos, PhotoUploader
   serialize :photos, JSON # If you use SQLite, add this line.
@@ -13,7 +15,7 @@ class User < ApplicationRecord
     "#{first_name} #{last_name}"
   end
 
-  def company
-    "test company"
-  end
+  # def company
+  #   "test company"
+  # end
 end

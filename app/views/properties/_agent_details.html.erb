@@ -1,7 +1,7 @@
-<div class="">
-  <%= @agent.full_name %>
-  <%= @agent.company %>
-
-  <button class="btn btn-info">Call</div><%= @agent.first_name %></button>
-  <button class="btn btn-success">Email</div><%= @agent.first_name %></button>
+<div class="agent-details">
+  <h3 class="h4"><%= @agent.full_name %></h3>  
+  <p><%= @agent.company %></p> 
+  
+  <button class="btn btn-outline-info text-uppercase mt-3">Call</button>
+  <button class="btn btn-outline-success text-uppercase mt-3">Email</button>
 </div>

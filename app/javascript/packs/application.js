@@ -21,6 +21,10 @@ ActiveStorage.start()
 // External imports
 import "bootstrap";
 
+var jquery = require("jquery");
+global.S = global.jQuery = jQuery
+window.S = window.jQuery = jQuery
+
 require("./includes/properties");
 
 // Internal imports, e.g:

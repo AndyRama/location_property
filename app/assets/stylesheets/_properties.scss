@@ -1,8 +1,17 @@
+.img .property-thumb {
+ 
+  background-size: contain;
+ 
+}
+
 .property-thumb {
-  height:170px;
+ 
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  align-content: center;
+  // height:170px;
+  // width:364px ;
+  display: block;
 }
 
 .property-main-photo {
@@ -20,3 +29,6 @@
   }  
 }
 
+.card-product {
+ 
+}

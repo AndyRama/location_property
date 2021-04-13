@@ -1,6 +1,8 @@
 <div class="agent-details">
-  <h3 class="h4"><%= current_user.full_name %></h3>  
-  <p><%= current_user.company %></p> 
+  <%= profile_picture current_user%> 
+
+  <h3 class="h4"><%=  current_user.full_name %></h3>  
+  <p><%=  current_user.company %></p> 
   
   <button class="btn btn-outline-info text-uppercase mt-3">Call</button>
   <button class="btn btn-outline-success text-uppercase mt-3">Email</button>

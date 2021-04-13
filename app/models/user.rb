@@ -5,10 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :properties
-  # has_one_attached :image
-  # has_one_attached :cover_image
+  has_one_attached :image
+  has_one_attached :cover_image
 
-  mount_uploader :photos, PhotoUploader
+
+  mount_uploader :photos, ProfilePictureUploader
   serialize :photos, JSON # If you use SQLite, add this line.
 
   def full_name

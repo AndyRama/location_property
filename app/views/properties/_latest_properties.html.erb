@@ -2,26 +2,30 @@
 
   <div class="col-4">
     <%= property_thumbnail property %>
-    <%#= property_photo_url @property %>
-    <div class="property-summary p-3">
-      <h3 class="h5"><%= link_to property.name, property_path(property), class: "text-dark" %></h3> 
+      <%= link_to property_path(property) do %>
+      <%#= property_photo_url @property %>
 
-      <span class= "mr-2">
-        <%= property.rooms %> 
-        <i class="fas fa-bed text-muted ml-1"></i>            
-      </span>
+        <div class="property-thumb"style= "background: url(property_thumbnail_url(property))">
+          <div class="property-summary p-3">
+            <h3 class="h5"><%= link_to property.name, property_path(property), class: "text-dark" %></h3> 
 
-      <span class= "mr-2">
-        <%= property.bathrooms %>
-        <i class="fas fa-bath text-muted ml-1"></i>             
-      </span>
+          <span class= "mr-2">
+            <%= property.rooms %> 
+            <i class="fas fa-bed text-muted ml-1"></i>            
+          </span>
 
-      <span>
-        <%= property.parking_spaces %>
-        <i class="fas fa-car text-muted ml-1"></i>          
-      </span>
+          <span class= "mr-2">
+            <%= property.bathrooms %>
+            <i class="fas fa-bath text-muted ml-1"></i>             
+          </span>
 
+          <span>
+            <%= property.parking_spaces %>
+            <i class="fas fa-car text-muted ml-1"></i>          
+          </span>
+        </div>
       <p class="mt-2"><%= property.address %></p>
+     <% end %>
     </div>
   </div>
 <% end %> 

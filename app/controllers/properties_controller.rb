@@ -9,6 +9,7 @@ class PropertiesController < ApplicationController
 
   def show
     @agent = @property.user
+    @agent_properties = Propertiy.where
   end
  
   def new

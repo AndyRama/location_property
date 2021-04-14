@@ -1,12 +1,15 @@
 <div class="agent-details">
-  <div class="text-center border pt-4 pb-4 ml-3">
+  <div class="text-center border p-4 pb-4 ml-3">
     <div class="mb-2">
       <%= profile_picture current_user%> 
     </div>
-    <h3 class="h4"><%=  current_user.full_name %></h3>  
+    <h3 class="h4 m-0"><%=  current_user.full_name %></h3>  
     <p><%=  current_user.company %></p> 
-    <button class="btn btn-outline-info text-uppercase mt-3">Call</button>
-    <button class="btn btn-outline-success text-uppercase mt-3">Email</button>
+
+    <button class="btn btn-block btn-info text-uppercase mb-3" id="show-tel" data-number ="<%= @agent.number %> "><i class="fas fa-phone mr-2"></i>Call</button>
+
+    <%= link_to "Profile", profile_path(@agent.id), class: "btn btn-secondary text-uppercase mt-3"%>
+    <button class="btn btn-success text-uppercase mt-3">Email</button>
   </div>
 </div>
     

@@ -25,6 +25,12 @@ var jquery = require("jquery");
 global.S = global.jQuery = jQuery
 window.S = window.jQuery = jQuery
 
+// import toasttr from' toasttr';
+// toasttr.option = {
+//   progressBar: true
+// }
+// global.toasttr = toasttr;
+
 require("./includes/properties");
 
 // Internal imports, e.g:

@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   get '/users' => 'admin#users', as: :users
   get "/dashboard" => 'dashboard#index', as: :dashboard
-  # get 'dashboard/properties'
   # get 'dashboard/reports'
 
   root to: 'public#main'

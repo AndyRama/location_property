@@ -54,6 +54,10 @@ class PropertiesController < ApplicationController
     end
   end
 
+  def email_agent
+    #trigger email send
+    format.json { head :no_content }
+  end
   #response to script
   respond_to do |format|
     format.json { head :no_content }

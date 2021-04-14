@@ -21,15 +21,18 @@ ActiveStorage.start()
 // External imports
 import "bootstrap";
 
-var jquery = require("jquery");
-global.S = global.jQuery = jQuery
-window.S = window.jQuery = jQuery
+var jQuery = require("jquery");
+global.$ = global.jQuery = jQuery
+window.$ = window.jQuery = jQuery
 
-// import toasttr from' toasttr';
-// toasttr.option = {
-//   progressBar: true
-// }
-// global.toasttr = toasttr;
+
+require("bootstrap");
+
+import toastr from 'toastr';
+  toastr.options = {
+    progressBar: true
+  }
+global.toastr = toastr;
 
 require("./includes/properties");
 

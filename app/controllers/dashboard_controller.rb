@@ -1,7 +1,11 @@
 class DashboardController < ApplicationController
-  before_action :set_sidebar, except: [:show]  
+  before_action :set_sidebar, except: [:show]
 
   def index
+  end
+
+  def profile
+    @user = User.find(params[:id])
   end
 
   private

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/users' => 'admin#users', as: :users
   get "/dashboard" => 'dashboard#index', as: :dashboard
-  # get 'dashboard/reports'
+  get "/profile/:id" => 'dashboard#profile', as: :profile
 
   root to: 'public#main'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

@@ -9,10 +9,10 @@
     </div>
   </div>
   
-  <section id="latest-properties" class=" mb-5 w-100 h-100" >
+  <section id="latest-properties" class=" mb-5" >
     <div class="container">
       <div class="row">
-        <%= render "properties/latest_properties" %>
+        <%= render "properties/list", properties: @properties %>
       </div>
     </div>
   </section>

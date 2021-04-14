@@ -1,17 +1,12 @@
-.img .property-thumb {
- 
-  background-size: contain;
- 
+section#latest-properties {
+  padding-left: 112px;
 }
 
 .property-thumb {
- 
   background-repeat: no-repeat;
   background-position: center center;
-  align-content: center;
-  // height:170px;
-  // width:364px ;
-  display: block;
+  background-size: cover;
+  width: 100%;
 }
 
 .property-main-photo {
@@ -29,6 +24,8 @@
   }  
 }
 
-.card-product {
- 
+.property-cards {
+  max-width: 60%;
+   box-sizing: border-box;
+
 }

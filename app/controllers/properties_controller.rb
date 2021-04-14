@@ -9,7 +9,7 @@ class PropertiesController < ApplicationController
 
   def show
     @agent = @property.user
-    @agent_properties = Propertiy.where
+    @agent_properties = Property.where(user_id: @agent.id).where.not(id: @property.id)
   end
  
   def new

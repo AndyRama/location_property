@@ -8,10 +8,10 @@ class DashboardController < ApplicationController
     @user = User.find(params[:id])
     @properties = Property.where(user_id: @user.id)
 
-    @properties_sold = Property.where(user_id: @user.id).sold
-    @properties_for_sale = Property.where(user_id: @user.id).for_sale
-    @properties_leased = Property.where(user_id: @user.id).leased
-    @properties_for_rent = Property.where(user_id: @user.id).for_rent
+    @properties_sold = Property.where(user_id: @user.id).sold.count
+    @properties_for_sale = Property.where(user_id: @user.id).for_sale.count
+    @properties_leased = Property.where(user_id: @user.id).leased.count
+    @properties_for_rent = Property.where(user_id: @user.id).for_rent.count
   end
 
   private

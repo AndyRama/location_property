@@ -15,19 +15,19 @@
          <div class="row mt-sm-3 bg-light p-3">
             <div class="col-3">
               <i class="fas fa-bed text-muted ml-0"></i> <br />
-               <small><%= @property_sold %>Sold</small>
+               <small><%= @properties_sold %>Sold</small>
             </div>
             <div class="col-3">
               <i class="fas fa-bed text-muted ml-0"></i> <br />
-               <small><%= @property_for_sale %>For sale</small>
+               <small><%= @properties_for_sale %>For sale</small>
             </div>
             <div class="col-3">
               <i class="fas fa-bath text-muted ml-0"></i> <br />  
-               <small><%= @property_leased %>Leased</small>
+               <small><%= @properties_leased %>Leased</small>
             </div> 
             <div class="col-3">
               <i class="fas fa-car text-muted ml-0"></i> <br />                
-               <small><%= @property_for_rent %>For rent</small>
+               <small><%= @properties_for_rent %>For rent</small>
             </div>
           </div>
         </div>  
@@ -56,3 +56,11 @@
     </div>
   </div>
 </div>
+<section class=" mt-5 mb-5 ">
+  <div class="container">
+    <div class="row">
+      <%= render "properties/list", properties: @properties%>
+    </div>
+  </div>
+</section>
+<%=  render "properties/send_email_modal", agent: @user %>

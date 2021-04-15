@@ -4,5 +4,10 @@ class Property < ApplicationRecord
   belongs_to :user
 
   scope :latest, -> { order created_at: :desc }
+
+  scope :sold, -> { where status: "sold" }
+  scope :for_sale, -> { order created_at: :desc }
+  scope :leased, -> { order created_at: :desc }
+  scope :for_rent, -> { order created_at: :desc }
   # Ex:- scope :active, -> {where(:active => true)}
 end

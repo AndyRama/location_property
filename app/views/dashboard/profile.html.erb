@@ -10,22 +10,20 @@
         <div class="col-lg-5">
           <p class="h4 mb-0"> <%= @user.full_name %> </p>
           <p class="mb-2"> <%= @user.company %> </p>
-          <p class="h2 mb-3"></p>
-          </p>             
-        </div>
+       </div>
        <div class="col-lg-7 text-center">
          <div class="row mt-sm-3 bg-light p-3">
             <div class="col-4">
               <i class="fas fa-bed text-muted ml-0"></i> <br />
-              <%= @property.rooms %> <small>Sold</small>
+               <small><%= @ %>Sold</small>
             </div>
             <div class="col-4">
               <i class="fas fa-bath text-muted ml-0"></i> <br />  
-              <%= @property.bathrooms %> <small>Leased</small>
+               <small><%= @property.bathrooms %>Leased</small>
             </div> 
             <div class="col-4">
               <i class="fas fa-car text-muted ml-0"></i> <br />                
-              <%= @property.parking_spaces %> <small>Active</small>
+               <small><%= @property.parking_spaces %>Active</small>
             </div>
           </div>
         </div>  

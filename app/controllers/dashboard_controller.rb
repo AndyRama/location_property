@@ -6,6 +6,7 @@ class DashboardController < ApplicationController
 
   def profile
     @user = User.find(params[:id])
+    @properties = Property.where(user_id: @user.id)
   end
 
   private

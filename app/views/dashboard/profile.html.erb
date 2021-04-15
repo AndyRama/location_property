@@ -1,4 +1,4 @@
-<div class="property-main-photo" style="background-image:url('<%= property_photo_url @property %>')">
+<div class="property-main-photo" style="background-image:url('<%= property_photo_url @properties.last %>')">
   <div class="photo-overlay">
   </div>
 </div>
@@ -8,29 +8,24 @@
     <div class="col-sm-8">
       <div class="row">
         <div class="col-lg-5">
-          <p class="h4 mb-0"> <%= @property.for_sale? ? "For Sale" : "For Rent" %> </p>
-          <p class="mb-2"> <%= @property.address %> </p>
+          <p class="h4 mb-0"> <%= @user.full_name %> </p>
+          <p class="mb-2"> <%= @user.company %> </p>
           <p class="h2 mb-3"></p>
-            <% if @property.for_sale? %>
-              <%= @property.price > 0 ? number_to_currency(@property.price, precision: 0) : "Offer Accepted" %>
-            <% else %>
-              <%=@property.price >0 ? number_to_currency(@property.price, precision: 0) : "Open for enquiries" %> /mount
-            <% end %>
-         </p>             
-       </div>
+          </p>             
+        </div>
        <div class="col-lg-7 text-center">
          <div class="row mt-sm-3 bg-light p-3">
             <div class="col-4">
               <i class="fas fa-bed text-muted ml-0"></i> <br />
-              <%= @property.rooms %> <small>Bedrooms</small>
+              <%= @property.rooms %> <small>Sold</small>
             </div>
             <div class="col-4">
               <i class="fas fa-bath text-muted ml-0"></i> <br />  
-              <%= @property.bathrooms %> <small>Bathrooms</small>
+              <%= @property.bathrooms %> <small>Leased</small>
             </div> 
             <div class="col-4">
               <i class="fas fa-car text-muted ml-0"></i> <br />                
-              <%= @property.parking_spaces %> <small>Parking</small>
+              <%= @property.parking_spaces %> <small>Active</small>
             </div>
           </div>
         </div>  
@@ -66,5 +61,6 @@
         </div> 
       </div>
     </div>
+    <%= render " properties/agent_details", agent: @user %>
   </div>
 </div>

@@ -12,8 +12,8 @@
       </div>
       <div class="modal-body">
         <%= form_tag email_agent_path, id: "email-agent" do %>
-          <%= hidden_field_tag :agent_id, @agent_id%>
-          
+         <%= hidden_field_tag :agent_id, @agent.id %>
+        
           <div class="form-group">
             <label for="message-first-name" class="col-form-label">First name:</label>
             <%= text_field_tag :first_name, nil, class: "form-control", id:"message-first-name"%>

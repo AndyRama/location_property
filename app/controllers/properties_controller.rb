@@ -1,10 +1,8 @@
 class PropertiesController < ApplicationController
-  require 'json'
-
   before_action :set_property, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :update, :destroy]
   before_action :set_sidebar, except: [:show]
-
+  
   def index
     @properties = Property.all
   end
@@ -24,13 +22,12 @@ class PropertiesController < ApplicationController
   def create
     @property = Property.new(property_params)
     @property.user_id = current_user.id
-
     respond_to do |format|
       if @property.save!
-        format.html { redirect_to @property, notice: 'property was successfully created.'}
-        format.json { render :show, status: :created, location: @property}
+        format.html { redirect_to @property, notice: 'property was successfully created.' }
+        format.json { render :show, status: :created, location: @property }
       else
-        format.html {render :new}
+        format.html { render :new }
         format.json { render json: @property.errors, status: :unprocessable_entity }
       end
     end
@@ -48,6 +45,8 @@ class PropertiesController < ApplicationController
     end
   end
   
+  # DELETE /properties/1
+  # DELETE /properties/1.json
   def destroy
     @property.destroy
     respond_to do |format|
@@ -56,9 +55,10 @@ class PropertiesController < ApplicationController
     end
   end
 
-  # trigger email send
-  def email_agent
+  # trigger email sent
+  def email_agent 
 
+    # agent_id = @agent[:agent_id]
     agent_id = params[:agent_id]
     first_name = params[:first_name]
     last_name = params[:last_name]
@@ -77,7 +77,7 @@ class PropertiesController < ApplicationController
   def set_property
     @property = Property.find(params[:id])
   end
- 
+
   def set_sidebar
     @show_sidebar = true
   end

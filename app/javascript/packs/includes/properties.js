@@ -19,10 +19,10 @@ $(function(){
   // Send email with modal
   $("#send-message-to-agent").on("click", function(){
     const agent_id = $("#agent_id").val(),
-      first_name = $("#message-first-name").val(),
-      last_name = $("#message-last-name").val(),
-      email = $("#message-email").val(),
-      message = $("#message-text").val();
+          first_name = $("#message-first-name").val(),
+          last_name = $("#message-last-name").val(),
+          email = $("#message-email").val(),
+          message = $("#message-text").val();
 
     $.ajax({
       url: "/agent/message",
@@ -36,7 +36,9 @@ $(function(){
         message: message
       },
       success: function(data){
-         console.log(data);
+         $('#contact-modal form').remove();
+         $('#send-message-to-agent').remove();
+         $('#contact-modal .modal-body').html("<p> your message has been sent successfully!</p>");
       }
       
     });  

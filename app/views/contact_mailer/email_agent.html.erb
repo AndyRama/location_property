@@ -1,9 +1,10 @@
-<p>HI <%= @agent.first_name  %>,</p>
+HI <%= @agent.first_name  %>,
 
-<p>you have a new message from Location Property.</p>
-<p>First name : <%= @first_name %> <br />
-Last name : <%= @last_name %><br />
-Email : <%= @email %></p>
+you have a new message from Location Property.
+
+First name : <%= @first_name %>
+Last name : <%= @last_name %>
+Email : <%= @email %>
 
 <%= simple_format @message do  %>
   Message: <%= @message %>

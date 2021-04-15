@@ -1,4 +1,6 @@
 class PropertiesController < ApplicationController
+  require 'json'
+
   before_action :set_property, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :update, :destroy]
   before_action :set_sidebar, except: [:show]
@@ -56,19 +58,20 @@ class PropertiesController < ApplicationController
 
   # trigger email send
   def email_agent
+
+    agent_id = params[:agent_id]
     first_name = params[:first_name]
     last_name = params[:last_name]
     email = params[:email]
     message = params[:message]
 
-    format.json { head :no_content }
+    ContactMailer.email_agent(agent_id, first_name, last_name, email, message).deliver_now
+  
+    # response to script
+    respond_to do |format|
+      format.json { head :no_content }
+    end
   end
-
-  # response to script
-  respond_to do |format|
-    format.json { head :no_content }
-  end
-
   private
 
   def set_property

@@ -35,7 +35,7 @@
       
       <div class="row border-top border-bottom mt-5 mb-4 pt-4 pb-4">
         <div class="col-6">
-          Porperties
+          Properties
         </div>  
         <div class="col-6 text-right">
           <strong><%= link_to "Can I afford this property?" , "#", class: "text-success" %> </strong>
@@ -44,21 +44,15 @@
 
       <div class="row">
         <div class="col"> 
-          <p class="h3"><%= @property.name %></p>     
-          <p class="h5">Property Description</p>
+          <p class="h5">Description</p>
          
           <div id="prop-details" class="">
-            <%= simple_format @property.details %>
+            <%= simple_format @user.details %>
           </div>  
           <button class="btn btn-outline-info mt-3 mb-3" id="toggleDetails">Show more</button>  
-
-          <p class="mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate incidunt ipsum ducimus illum? Atque eveniet voluptate rerum minima odit eligendi quasi in. Incidunt esse sunt, corrupti amet mollitia veritatis dicta?</p>
-          <% if @property.for_sale %>
-            <p class="mt-5">* This rate is based on a 30 year mortgage, after paying an initial 10% down payment. Shorter term mortgage would require a higher monthly repayment</p>
-          <% end %>            
-        </div> 
-      </div>
+        </div>
+      </div>  
+        <%= render "properties/agent_details", agent: @user %>
     </div>
-    <%= render " properties/agent_details", agent: @user %>
   </div>
 </div>

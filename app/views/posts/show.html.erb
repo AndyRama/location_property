@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container">
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
@@ -17,7 +17,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @post.image %>
+  <%=  @post.image %>
 </p>
 
 <p>
@@ -32,3 +32,5 @@
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+
+</div>

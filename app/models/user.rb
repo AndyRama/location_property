@@ -7,8 +7,7 @@ class User < ApplicationRecord
   has_many :properties
   has_one_attached :image
   has_one_attached :cover_image
-
-
+  
   mount_uploader :photos, ProfilePictureUploader
   serialize :photos, JSON # If you use SQLite, add this line.
 

@@ -8,7 +8,7 @@
            
         <div class="form-inputs">
           <%= f.input :email, required: true, autofocus: true %>
-          
+     
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
             <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
           <% end %>
@@ -31,9 +31,12 @@
                       hint: "leave it blank if you don't want to change it",
                       required: false,
                       input_html: { autofocus: "Company" } %>
-          <%= f.input :photos,
+          <%= f.input :image,
                       required: false,
-                      input_html: { autocomplete: "images" } %>
+                      input_html: { autocomplete: "photo property" } %>
+          <%= f.input :cover_image,
+                      required: false,
+                      input_html: { autocomplete: "photo property" } %>
           <%= f.input :password,
                       hint: "leave it blank if you don't want to change it",
                       required: false,

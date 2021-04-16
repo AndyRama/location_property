@@ -1,26 +1,29 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
   before_action :set_post, only: %i[show edit update destroy]
-  # before_action :can_access?, except: [:show,]
+  before_action :can_access?, except: [:show, :latest]
 
   def index
     @posts = Post.all
   end
 
-  # GET /posts/1 
+  def latest
+    @posts = Post.active
+  end
+
   def show
   end
 
-  # GET /posts/new
+  
   def new
     @post = Post.new
   end
 
-  # GET /posts/1/edit
+  
   def edit
   end
 
-  # POST /posts 
+
   def create
     @post = Post.new(post_params)
 
@@ -33,7 +36,7 @@ class PostsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /posts/1 
+ 
   def update
     respond_to do |format|
       if @post.update(post_params)
@@ -44,7 +47,7 @@ class PostsController < ApplicationController
     end
   end
 
-  # DELETE /posts/1 
+
   def destroy
     @post.destroy
     respond_to do |format|
@@ -54,13 +57,12 @@ class PostsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def post_params
-      params.require(:post).permit(:title, :url, :summary, :image, :body, :active)
-    end
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
+  def post_params
+    params.require(:post).permit(:title, :url, :summary, :image, :body, :active)
+  end
 end

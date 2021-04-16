@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :posts
   resources :properties
+ 
+  get '/blog' => 'posts#latest', as: :blog
 
   get '/users' => 'admin#users', as: :users
 

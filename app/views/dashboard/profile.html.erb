@@ -1,4 +1,4 @@
-<div class="property-main-photo" style="background-image:url('<%= property_photo_url @properties %>')">
+<div class="property-main-photo" style="background-image:url('<%= property_photo_url @properties.last %>')">
   <div class="photo-overlay">
   </div>
 </div>
@@ -10,26 +10,26 @@
         <div class="col-lg-5">
           <p class="h4 mb-0"> <%= @user.full_name %> </p>
           <p class="mb-2"> <%= @user.company %> </p>
-       </div>
-       <div class="col-lg-7 text-center">
-         <div class="row mt-sm-3 bg-light p-3">
+        </div>
+        <div class="col-lg-7 text-center">
+          <div class="row mt-sm-3 bg-light p-3">
             <div class="col-3">
               <i class="fas fa-bed text-muted ml-0"></i> <br />
-               <small><%= @properties_sold %>Sold</small>
+              <small><%= @properties_sold %>Sold</small>
             </div>
             <div class="col-3">
               <i class="fas fa-bed text-muted ml-0"></i> <br />
-               <small><%= @properties_for_sale %>For sale</small>
+              <small><%= @properties_for_sale %>For sale</small>
             </div>
             <div class="col-3">
               <i class="fas fa-bath text-muted ml-0"></i> <br />  
-               <small><%= @properties_leased %>Leased</small>
+              <small><%= @properties_leased %>Leased</small>
             </div> 
             <div class="col-3">
               <i class="fas fa-car text-muted ml-0"></i> <br />                
-               <small><%= @properties_for_rent %>For rent</small>
+              <small><%= @properties_for_rent %>For rent</small>
             </div>
-          </div>
+            </div>
         </div>  
       </div>
       
@@ -54,7 +54,7 @@
       </div>  
     </div>
     <div class="col-md-4">
-        <%= render "properties/agent_details", agent: @user %>
+      <%= render "properties/agent_details", agent: @user %>
     </div>
   </div>
 </div>

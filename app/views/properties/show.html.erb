@@ -79,8 +79,8 @@
       <div class="col-12">
         <p class="h3 mb-3">Current listings by this agent</p>
       </div>
-      <%= render "properties/list", properties: @properties%>
+      <%= render "properties/list", properties: @agent_properties%>
     </div>
   </div>
 </section>
-<%=  render "properties/send_email_modal" %>
+<%=  render "properties/send_email_modal",agent: @agent  %>

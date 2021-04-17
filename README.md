@@ -22,19 +22,11 @@ I also added some responsive css to make our platform mobile / tablet / iPad fri
 
 ## The Screenshots
 
-<<<<<<< HEAD
 ![alt text](https://github.com/AndyRama/location_property/blob/master/HomeLocation.png?raw=true)
 
 ![alt text](https://github.com/AndyRama/location_property/blob/master/Propertypage.png?raw=true)
 
 ![alt text](https://github.com/AndyRama/location_property/blob/master/AgencyList.png?raw=true)
-=======
-![alt text](https://github.com/AndyRama/location_property/main/blob/app/assets/images/HomeLocation.png?raw=true)
-
-![alt text](https://github.com/AndyRama/location_property/main/blob/app/assets/images/Propertypage.png?raw=true)
-
-![alt text](https://github.com/AndyRama/location_property/main/blob/app/assets/images/Agency%20List.png?raw=true)
->>>>>>> ca731310001ed5a3f78f73a1cf03b938119af11a
 
 
 

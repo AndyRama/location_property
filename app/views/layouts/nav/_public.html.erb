@@ -15,21 +15,22 @@
             <% end %>   
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Lastest</a>
+          <a class="nav-link" href="#">For Rent</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search</a>
-          <ul class="dropdown-menu" aria-labelledby="dropdown03">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="#">For Sale</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Featured</a>
         </li>
         <li class="nav-item">
             <%= link_to "Blog", blog_path, class: "nav-link" %>        
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Advertising</a>
+          <a class="nav-link" href="#">Advertise</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
         </li>
       </ul>
         <% if user_signed_in? %>

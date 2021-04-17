@@ -17,15 +17,16 @@ Location Property platform build using Ruby on Rails 6.
 5. Updating the agent profile page to show a cover image, user details and stats about properties leased and sold. Users can now change the status of properties to mark them as leased or sold from their user account when signed in. I also added blog posts to the app and improve the homepage styling. In the backend I added an accounts page for admin accounts and ability to add/edit/update blog entries.
 
 
+
 I also added some responsive css to make our platform mobile / tablet / iPad friendly.
 
 ## The Screenshots
 
-![alt text](https://github.com/AndyRama/location_property/blob/main/app/assets/images/HomeLocation.png?raw=true)
+![alt text](https://github.com/AndyRama/location_property/app/assets/images/HomeLocation.png?raw=true)
 
-![alt text](https://github.com/AndyRama/location_property/blob/main/app/assets/images/Propertypage.png?raw=true)
+![alt text](https://github.com/AndyRama/location_property/app/assets/images/Propertypage.png?raw=true)
 
-![alt text](https://github.com/AndyRama/location_property/blob/main/app/assets/images/Agency%20List.png?raw=true)
+![alt text](https://github.com/AndyRama/location_property/app/assets/images/Agency%20List.png?raw=true)
 
 
 

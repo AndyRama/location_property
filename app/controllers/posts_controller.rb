@@ -1,8 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: %i[new create]
   before_action :set_post, only: %i[show edit update destroy]
-  # before_action :can_access?, except: [:latest]
-
+ 
   def index
     @posts = Post.all
   end
@@ -14,15 +13,12 @@ class PostsController < ApplicationController
   def show
   end
 
-  
   def new
     @post = Post.new
   end
 
-  
   def edit
   end
-
 
   def create
     @post = Post.new(post_params)
@@ -36,7 +32,6 @@ class PostsController < ApplicationController
     end
   end
 
- 
   def update
     respond_to do |format|
       if @post.update(post_params)
@@ -46,7 +41,6 @@ class PostsController < ApplicationController
       end
     end
   end
-
 
   def destroy
     @post.destroy

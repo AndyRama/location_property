@@ -1,34 +1,15 @@
 <% posts.each do |post| %>
   <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
     <div class="property border">
-      <div class="property-thumb mb-4" style= "background-image": url(<%= property_thumbnail(post)%>>  
+      <div class="property-thumb" style= "background-image": url(<%= post_thumbnail_url(post)%>>  
         <%= link_to "", post_path(post) %>
       </div>
        
       <div class="property-summary p-3">
-        <h3 class="h5"><%= link_to property.name, property_path(property), class: "text-dark" %></h3> 
+        <h3 class="h5"><%= link_to post.title, post_path(post), class: "text-dark" %></h3> 
 
-        <span class= "mr-2">
-          <%= property.rooms %> 
-          <i class="fas fa-bed text-muted ml-1"></i>            
-        </span>
-
-        <span class= "mr-2">
-          <%= property.bathrooms %>
-          <i class="fas fa-bath text-muted ml-1"></i>             
-        </span>
-
-        <span>
-          <%= property.parking_spaces %>
-          <i class="fas fa-car text-muted ml-1"></i>          
-        </span>
-
-        <span class="mt-2">
-          <i class="fas fa-home text-muted ml-1"></i>          
-          <%= property.address %>
-        </span>
-      </div>
-        <%# end %>      
+        <p class="mt-2"><%= post.summary %> </p>
+      </div>     
     </div>  
   </div>
 <% end %>

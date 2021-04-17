@@ -1,14 +1,11 @@
 <% properties.each do |property| %>
-  <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+  <div class="col-4 mb-5 ">
     <div class="property border">
-
-      <div class="property-thumb mb-4" style= "background-image": url(<%= property_thumbnail(property)%>></div>  
-        <%= link_to property_path(property)%>
-      </div>
-
-        <%#= property_thumbnail property %>
+      <%= link_to property_path(property) do %>
+        <%= property_thumbnail property %>
+        <div class="property-thumb mb-4" style= "background-image": url(<%= property_thumbnail(property)%></div>  
           <div class="property-summary p-3">
-            <h3 class="h3"><%= link_to property.name, property_path(property), class: "text-dark" %></h3> 
+            <h3 class="h5"><%= link_to property.name, property_path(property), class: "text-dark" %></h3> 
 
             <span class= "mr-2">
               <%= property.rooms %> 
@@ -31,7 +28,7 @@
               <i class="fas fa-home text-muted ml-1"></i>          
               <%= property.address %>
             </span>
-         </div>    
+        <% end %>      
     </div>  
   </div>
 <% end %>

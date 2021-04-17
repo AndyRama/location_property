@@ -12,11 +12,19 @@ body {
 }
 
 #home-banner .jumbotron { 
-  background: image-url("banner.jpg") no-repeat center center;
+  background: image-url("banner-home.jpg") no-repeat center center;
   background-size: cover ;
-  color: #fff;
-  
-  H1, p {
+}
+
+#blog-banner .jumbotron {
+  background: image-url("banner-blog.jpg") no-repeat center center;
+  background-size: cover ;
+}
+
+.main-banner .jumbotron {
+
+  h1, p {
+     color: #fff;
     text-shadow:  1px 1px 2px #777;
   }
 }

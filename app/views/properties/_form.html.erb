@@ -32,24 +32,18 @@
       <%= form.number_field :parking_spaces, class: "form-control" %>
     </div>
 
-    <div class="row ml-2">
-      <div class="form-group">
-        <%= form.label :for_rent %>
-        <%= form.select :for_rent, options_for_select({"Yes" => true, "No" => false}, @property.for_rent), class: "form-control"  %>
-      </div> 
+    <div class="form-group ml-3">
+      <%= form.label :for_sale %>
+      <%= form.select :for_sale, options_for_select({"Yes" => true, "No" => false}, @property.for_sale), class: "form-control"  %>
+    </div> 
 
-      <div class="form-group ml-3">
-        <%= form.label :for_sale %>
-        <%= form.select :for_sale, options_for_select({"Yes" => true, "No" => false}, @property.for_sale), class: "form-control"  %>
-      </div> 
-
-      <div class="form-group ml-3">
-        <% opts = @property.for_sale? ? 
-        {"Available" => "available", "Sold" => "sold"} : {"Available" => "available", "Leased" => "leased"} %>
-        <%= form.label :status %>
-        <%= form.select :status, options_for_select(opts, @property.status), class: "form-control"  %>
-      </div>
+    <div class="form-group ml-3">
+      <% opts = @property.for_sale? ? 
+      {"Available" => "available", "Sold" => "sold"} : {"Available" => "available", "Leased" => "leased"} %>
+      <%= form.label :status %>
+      <%= form.select :status, options_for_select(opts, @property.status), class: "form-control"  %>
     </div>
+    
 
     <div class="form-group">
       <%= form.label :available_date, class: "form-control" %>

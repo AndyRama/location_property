@@ -2,7 +2,7 @@ class PropertiesController < ApplicationController
   before_action :set_property, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :update, :destroy]
   before_action :set_sidebar, except: [:show]
-  
+
   def index
     @properties = Property.all
   end
@@ -11,11 +11,11 @@ class PropertiesController < ApplicationController
     @agent = @property.user
     @agent_properties = Property.where(user_id: @agent.id).where.not(id: @property.id)
   end
- 
+
   def new
     @property = Property.new
   end
- 
+
   def edit
   end
 
@@ -44,9 +44,7 @@ class PropertiesController < ApplicationController
       end
     end
   end
-  
-  # DELETE /properties/1
-  # DELETE /properties/1.json
+
   def destroy
     @property.destroy
     respond_to do |format|
@@ -55,10 +53,8 @@ class PropertiesController < ApplicationController
     end
   end
 
-  # trigger email sent
-  def email_agent 
-
-    # agent_id = @agent[:agent_id]
+  # trigger email send
+  def email_agent
     agent_id = params[:agent_id]
     first_name = params[:first_name]
     last_name = params[:last_name]
@@ -66,7 +62,7 @@ class PropertiesController < ApplicationController
     message = params[:message]
 
     ContactMailer.email_agent(agent_id, first_name, last_name, email, message).deliver_now
-  
+
     # response to script
     respond_to do |format|
       format.json { head :no_content }
@@ -84,6 +80,6 @@ class PropertiesController < ApplicationController
   end
 
   def property_params
-    params.require(:property).permit(:name, :address, :price, :rooms, :bathrooms, :details, :parking_spaces, :photo, :photo_cache, :for_sale, :status, :available_date)
+    params.require(:property).permit(:name, :address, :price, :rooms, :bathrooms, :details, :parking_spaces, :photo, :photo_cache, :for_sale, :for_rent, :status, :available_date)
   end
 end

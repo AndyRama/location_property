@@ -10,9 +10,9 @@ $(function(){
     const details = $("#prop-details");
     details.toggleClass("open");
     if(details.hasClass("open")){
-      $(this).text("Show More");
-    } else {
       $(this).text("Show Less");
+    } else {
+      $(this).text("Show More");
     }
   }); 
   
@@ -36,9 +36,9 @@ $(function(){
         message: message
       },
       success: function(data){
-         $('#contact-modal form').remove();
-         $('#send-message-to-agent').remove();
-         $('#contact-modal .modal-body').html("<p> your message has been sent successfully!</p>");
+        $('#contact-modal form').remove();
+        $('#send-message-to-agent').remove();
+        $('#contact-modal .modal-body').html("<p> your message has been sent successfully!</p>");
       }
       
     });  

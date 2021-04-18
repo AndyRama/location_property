@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   resources :properties
  
 
-  get '/blog' => 'posts#latest', as: :blog
+  get "/blog" => "posts#latest", as: :blog
 
-  get '/users' => 'admin#users', as: :users
+  get "/users" => "admin#users", as: :users
 
   get "/dashboard" => 'dashboard#index', as: :dashboard
   get "/profile/:id" => 'dashboard#profile', as: :profile

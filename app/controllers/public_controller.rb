@@ -1,5 +1,5 @@
 class PublicController < ApplicationController
-  before_action :authenticate_user!, only: %i[main]
+  skip_before_action :authenticate_user!, only: %i[main]
 
   def main
     if user_signed_in?

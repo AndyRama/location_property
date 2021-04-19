@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  # resources :public  
+  resources :public  
   resources :posts
   resources :properties
-
-  get "/public" => "public#main", as: :public
 
   get "/blog" => "posts#latest", as: :blog
 

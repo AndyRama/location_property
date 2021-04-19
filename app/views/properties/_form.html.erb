@@ -53,18 +53,19 @@
     <%= form.text_area :details, class:"form-control" %>
   </div>
 
-  <%# <div class="form-group"> %>
-    <%#= form.label :photo %>
-    <%#= form.file_field :photo, class: "form-control" %>
-    <%#= form.hidden_field :photo_cache %>
-    
-    <%# if @property.photo.present? %>
-      <%#= image_tag(@property.photo.url, width: 1200, class: "img-fluid mt-2") %>      
-    <%# end %>
-  <%# </div> %>
-  <%= simple_form_for(property) do |f| %>
-    <%= f.input :photos, as: :file %>
-  <% end %>
+  <div class="form-group">
+    <%= form.label :photo %>
+    <%= form.file_field :photo, class: "form-control" %>
+    <%= form.hidden_field :photo_cache %>
+
+    <% if @property.photo.present? %>
+      <%= image_tag(@property.photo.url, width: 1200, class: "img-fluid mt-2") %>      
+    <% end %>
+  </div>
+
+  <%#= simple_form_for(property) do |f| %>
+    <%#= f.input :photos, as: :file %>
+  <%# end %>
 
   <div class="form-group">
     <%= form.submit "Save Property", class: "btn btn-primary" %>

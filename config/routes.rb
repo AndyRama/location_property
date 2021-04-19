@@ -2,8 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: 'public#main'
-  resources :public
-  
+  resources :public  
 
   resources :posts
   resources :properties

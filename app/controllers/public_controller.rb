@@ -1,5 +1,5 @@
 class PublicController < ApplicationController
-  before_action :authenticate_user!, only: %i[main]
+  skip_before_action :authenticate_user!, only: %i[main]
 
   def main
     if user_signed_in?
@@ -10,4 +10,5 @@ class PublicController < ApplicationController
     @properties = Property.latest
     @posts = Post.latest
   end
+
 end

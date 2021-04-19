@@ -1,7 +1,7 @@
 class Property < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   belongs_to :user
-  has_and_belongs_to_many :photos, join_table: "users", foreign_key: "user_id"
+  has_one_attached :photo
 
   scope :latest, -> { order created_at: :desc }
 

@@ -4,14 +4,14 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
 
 Location Property platform build using Ruby on Rails 6. 
 
-# [🔗 View Deployed Version](https://location-property-andy.herokuapp.com/users/sign_in)
+# [🔗 View Deployed Version](https://location-property-andy.herokuapp.com)
 
 
 ## Main features:
 
 1. The sign up / sign in / edit account using the devise gem.
 
-2. Add properties (with a photo that gets uploaded to Amazon AWS S3 using the aws-sdk-s3, active_storage_validations,image_processing gem) and build a property profile page.
+2. Add properties (with a photo that gets uploaded with Cloudinary, active_storage_validations,image_processing gem) and build a property profile page.
 
 3. Show property agent details and related properties from the same agent.
 

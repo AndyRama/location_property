@@ -1,4 +1,4 @@
-<div class="property-main-photo" style="background-image:url('<%= property_photo_url @property %>')">
+<div class="property-main-photo" style="background-image:url('<%= cl_image_tag @property.photo.key, width: 400, height: 300, crop: :fill %>')">
   <div class="photo-overlay">
   </div>
 </div>
@@ -15,7 +15,7 @@
               <% if @property.for_sale? %>
                 <%= @property.price > 0 ? number_to_currency(@property.price, precision: 0) : "Offer Accepted" %>
               <% else %>
-                <%=@property.price >0 ? number_to_currency(@property.price, precision: 0) : "Open for enquiries" %> /mount
+                <%=@property.price > 0 ? number_to_currency(@property.price, precision: 0) : "Open for enquiries" %> /mount
               <% end %>
             </p>             
         </div>

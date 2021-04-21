@@ -1,4 +1,4 @@
-<div class="property-main-photo" style="background-image:url('<%= cover_image_url @agent %>')">
+<div class="property-main-photo" style="background-image:url('<%= cover_image_url @user %>')">
   <div class="photo-overlay">
   </div>
 </div>
@@ -8,8 +8,8 @@
     <div class="col-md-8">
       <div class="row">
         <div class="col">
-          <p class="h4 mb-0"> <%= @agent.full_name %> </p>
-          <p class="mb-2"> <%= @agent.company %> </p>
+          <p class="h4 mb-0"> <%= @user.full_name %> </p>
+          <p class="mb-2"> <%= @user.company %> </p>
           <p>Registered for <%= time_ago_in_words @user.created_at %></p>
         </div>
       </div>

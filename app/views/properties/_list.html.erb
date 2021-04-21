@@ -3,7 +3,7 @@
     <div class="property border">
       <%= link_to property_path(property) do %>
         <%= property_thumbnail property %>
-        <div class="property-thumb mb-4" style= "background-image": url(<%= property_thumbnail(property)%></div>  
+        <div class="property-thumb mb-4" style= "background-image": url(<%= cl_image_tag @property.photo.key, height: 300, width: 400, crop: :fill %>)</div>  
           <div class="property-summary p-3">
             <h3 class="h5"><%= link_to property.name, property_path(property), class: "text-dark" %></h3> 
             <span class= "mr-2">

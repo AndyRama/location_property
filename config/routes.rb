@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :properties
 
   
-  # get "/For_Rent" => "property#latest", as: :for_rent
+  # get "/for_rent" => "properties#index", as: :for_rent
   # get "/For_Sale" => "property#latest", as: :for_sale
   # get "Advertise" => "#", as: :advertise
   # get "/Contact" => "#", as: :contact

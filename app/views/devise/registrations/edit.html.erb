@@ -31,6 +31,12 @@
                       hint: "leave it blank if you don't want to change it",
                       required: false,
                       input_html: { autofocus: "Company" } %>
+          <%= f.input :image,
+                      required: false,
+                      input_html: { autofocus: "image" } %>
+         <%= f.input :cover_image,
+                      required: false,
+                      input_html: { autofocus: "cover_image" } %>
           <%= f.input :password,
                       hint: "leave it blank if you don't want to change it",
                       required: false,

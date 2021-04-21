@@ -2,8 +2,8 @@
   <div class="col-3 mb-5 ">
     <div class="property border">
       <%= link_to property_path(property) do %>
-        <%= property_thumbnail property %>
-        <div class="property-thumb mb-4" style= "background-image": url(<%= cl_image_tag @property.photo.key, height: 300, width: 400, crop: :fill %>)</div>  
+        <%# <%= cl_image_path @property.photo.key, width: 400, height: 300, crop: :fill %> 
+          <div class="property-main-photo" style="background-image :url(<%= cl_image_path @properties.photo.key, width: 300, height: 300, crop: :fill %>")>
           <div class="property-summary p-3">
             <h3 class="h5"><%= link_to property.name, property_path(property), class: "text-dark" %></h3> 
             <span class= "mr-2">
@@ -23,6 +23,7 @@
               <i class="fas fa-home text-muted ml-1"></i>          
               <%= property.address %>
             </span>
+          </div>
       <% end %>      
     </div>  
   </div>

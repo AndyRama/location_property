@@ -59,7 +59,7 @@
     <%= form.hidden_field :photo_cache %>
 
     <% if @property.photo.present? %>
-      <%= image_tag(@property.photo.url, width: 1200, class: "img-fluid mt-2") %>      
+      <%= cl_image_path(@property.photo.key, width: 1200, class: "img-fluid mt-2") %>      
     <% end %>
   </div>
 

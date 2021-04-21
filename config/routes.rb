@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :properties
 
-  get "/blog" => "posts#latest", as: :blog
-
+  
   # get "/For_Rent" => "property#latest", as: :for_rent
   # get "/For_Sale" => "property#latest", as: :for_sale
   # get "Advertise" => "#", as: :advertise

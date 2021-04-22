@@ -3,7 +3,7 @@
     <div class="property border">
       <%= link_to property_path(property) do %>
         <%# <%= cl_image_path @property.photo.key, width: 400, height: 300, crop: :fill %> 
-          <div class="property-main-photo" style="background-image :url(<%= cl_image_path @properties.photo.key, width: 300, height: 300, crop: :fill %>")>
+          <%# <div class="property-main-photo" style="background-image :url(<%= cl_image_tag @properties.photo.key, width: 300, height: 300, crop: :fill %>
           <div class="property-summary p-3">
             <h3 class="h5"><%= link_to property.name, property_path(property), class: "text-dark" %></h3> 
             <span class= "mr-2">

@@ -1,4 +1,4 @@
-<div class="property-main-photo" style="background-image :url(<%= cl_image_path @property.photo.key, width: 300, height: 300, crop: :fill %>")
+<div class="property-main-photo" style="background-image:url('<%= property_photo_url @property %>')">
   <div class="photo-overlay">
   </div>
 </div>

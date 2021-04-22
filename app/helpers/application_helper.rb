@@ -1,10 +1,9 @@
 module ApplicationHelper
 
-  # def profile_picture user, width = 100
-  #   thumb = @user.image.present? ? @user.image.thumb.url : "placeholder.png"
-  #   image_tag thumb, width: width, class: "profile_pic img-circle ml-4"
-  #   # image_tag "id.png", width: width, class: "profile_pic img-circle ml-4"
-  # end
+   def profile_picture user
+    thumb = user.image.attached? ? url_for(user.image) : "default_avatar.png"
+    image_tag(thumb, width: 150, class: "profile_pic img-circle")
+  end
 
   def flash_notifications
     flash_messages = []

@@ -1,5 +1,5 @@
 module PostsHelper
   def post_thumbnail_url(post)
-    post.image.present? ? post.image.thumb.url : "placeholder.png"
+     post.photo.attached? ? url_for(post.photo) : "placeholder.png"  
   end
 end

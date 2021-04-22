@@ -1,6 +1,6 @@
 <div class="text-center border p-4 pb-4 ml-lg-4">
   <div class="mb-2">
-    <%= cl_image_tag @user.cover_image.key, class:"avatar avatar-xs", :width => 150, :height => 150, :crop => :thumb, gravity: :face  %>
+    <%= profile_picture @user %>
   </div>
  
   <h3 class="h4 m-0"><%= @user.full_name %></h3>

@@ -4,7 +4,11 @@ class PropertiesController < ApplicationController
   before_action :set_sidebar, except: [:show]
 
   def index
-    @properties = Property.all
+    if current_user.admin?
+      @properties = Property.all
+    else
+      @properties = current_user.properties.all
+    end
   end
 
   def show
@@ -24,7 +28,7 @@ class PropertiesController < ApplicationController
     @property.user_id = current_user.id
     respond_to do |format|
       if @property.save!
-        format.html { redirect_to @property, notice: 'property was successfully created.' }
+        format.html { redirect_to @property, notice: 'Property was successfully created.' }
         format.json { render :show, status: :created, location: @property }
       else
         format.html { render :new }
@@ -80,6 +84,6 @@ class PropertiesController < ApplicationController
   end
 
   def property_params
-    params.require(:property).permit(:name, :address, :price, :rooms, :bathrooms, :details, :parking_spaces, :photo, :image, :for_sale, :for_rent, :status, :available_date)
+    params.require(:property).permit(:name, :address, :price, :rooms, :bathrooms, :details, :parking_spaces, :photo, :for_sale, :for_rent, :status, :available_date)
   end
 end

@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  # mount_uploader :image, PhotoUploader
+  has_one_attached :photo
 
   scope :active, -> { where(active: true) }
   scope :latest, -> { order created_at: :desc }

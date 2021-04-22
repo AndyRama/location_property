@@ -1,6 +1,5 @@
 module ProfileHelper
-  # def cover_image_url user
-  #   thumb = @user.cover_image.present? ?  @user.cover_image_url : asset_url("placeholder.png")
-  #   image_path thumb
-  # end
+  def cover_image_url account     
+    account.cover_image.attached? ? url_for(account.cover_image) : 'placeholder.png'   
+  end
 end

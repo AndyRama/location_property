@@ -1,5 +1,4 @@
 class Property < ApplicationRecord
-  # mount_uploader :photo, PhotoUploader
   belongs_to :user
   has_one_attached :photo
 

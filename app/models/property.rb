@@ -2,9 +2,6 @@ class Property < ApplicationRecord
   belongs_to :user
   has_one_attached :photo
 
-  # geocoded_by :address
-  # after_validation :geocode
-
   scope :latest, -> { order created_at: :desc }
 
   scope :sold, -> { where(for_sale: true, status: "sold") }

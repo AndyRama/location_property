@@ -11,5 +11,4 @@ class PublicController < ApplicationController
     @properties = Property.latest
     @posts = Post.latest
   end
-
 end

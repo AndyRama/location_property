@@ -3,5 +3,13 @@ class PagesController < ApplicationController
 
   def home
   end
+  
+  def avertise
+  end
 
+  def for_rent
+  end
+
+  def for_sale
+  end
 end

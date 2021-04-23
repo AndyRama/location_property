@@ -7,11 +7,11 @@ Rails.application.routes.draw do
 
   # get "/feature" => "properties#latest", as: :feature
 
-  # # get "/sale" => "sale#latest", as: :for_sale
+  get "/for_sale" => "pages#for_sale", as: :for_sale
 
-  # get "/rent" => "rent#lastest", as: :for_rent
+  get "/for_rent" => "pages#for_rent", as: :for_rent
   
-  # get "/advertise" => "pages#advertise", as: :advertise
+  get "/advertise" => "pages#advertise", as: :advertise
 
   # get "/contact" => "pages#contact", as: :contact
 

@@ -12,4 +12,10 @@ class PagesController < ApplicationController
 
   def for_sale
   end
+  
+  def feature
+  end
+
+  def contact 
+  end
 end

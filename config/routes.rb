@@ -5,15 +5,15 @@ Rails.application.routes.draw do
   resources :posts
   resources :properties
 
-  # get "/feature" => "properties#latest", as: :feature
+  get "/contact" => "pages#contact", as: :contact
+
+  get "/feature" => "pages#feature", as: :feature
 
   get "/for_sale" => "pages#for_sale", as: :for_sale
 
-  get "/for_rent" => "pages#for_rent", as: :for_rent
-  
-  get "/advertise" => "pages#advertise", as: :advertise
+  get "/for_rent" => "pages#for_rent", as: :for_rent  
 
-  # get "/contact" => "pages#contact", as: :contact
+  get "/advertise" => "pages#advertise", as: :advertise
 
   get "/blog" => "posts#latest", as: :blog
 

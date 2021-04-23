@@ -4,10 +4,9 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
 
 Location Property platform build using Ruby on Rails 6. 
 
-https://location-property-andy.herokuapp.com/   user: ando@gmail.com   pwd: 42KgrDYiewMgySx
-
 # [🔗 View Deployed Version](https://location-property-andy.herokuapp.com)
 
+            user: ando@gmail.com   pwd: 42KgrDYiewMgySx
 
 ## Main features:
 

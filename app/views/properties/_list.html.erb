@@ -1,9 +1,9 @@
 <% properties.each do |property| %>
-  <div class="col-4 mb-5 ">
+  <div class="col-3 mb-5 ">
     <div class="property border">
       <%= link_to property_path(property) do %>
         <div class="property-thumb" style="background-image: url(<%= property_thumbnail_url(property) %>)">
-          </div>
+         </div>
            <div class="property-summary p-3">
             <h3 class="h5"><%= link_to property.name, property_path(property), class: "text-dark" %></h3> 
             <span class= "mr-2">
@@ -18,7 +18,6 @@
               <%= property.parking_spaces %>
               <i class="fas fa-car text-muted ml-1"></i>          
             </span>
-          </div>  
             <span class="mt-2">
               <i class="fas fa-home text-muted ml-1"></i>          
               <%= property.address %>

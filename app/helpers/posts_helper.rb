@@ -1,5 +1,6 @@
 module PostsHelper
   def post_thumbnail_url(post)
-     post.photo.attached? ? url_for(post.photo) : "placeholder.png"  
+    post.image.attached? ? url_for(post.image) : "placeholder.png"
+    image_tag(img, class: "property-thumb")
   end
 end

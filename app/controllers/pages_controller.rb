@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
   end
-  
+
   def avertise
   end
 
@@ -14,13 +14,12 @@ class PagesController < ApplicationController
   def for_sale
     @properties = Property.where(for_sale: true)
   end
-  
+
   def feature
-     @properties = Property.latest
+    @properties = Property.latest
   end
 
-  def contact 
+  def contact
   end
-
-
 end
+

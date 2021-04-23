@@ -1,1 +1,13 @@
-<h1> test feature</h1>
+<section id="lastest-properties" class="mb-4 mt-3" >
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <h3 class=" mb-4">Lastest Properties</h3>
+      </div>
+    </div>
+    <div class="row">
+      <%= render "properties/list", properties: @properties %>
+    </div>
+  </div>
+  <hr>
+</section>

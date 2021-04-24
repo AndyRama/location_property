@@ -7,10 +7,6 @@ class PagesController < ApplicationController
   def avertise
   end
 
-  def for_rent
-    @properties = Property.where(for_rent: true)
-  end
-
   def for_sale
     @properties = Property.where(for_sale: true)
   end

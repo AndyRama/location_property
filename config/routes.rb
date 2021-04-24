@@ -4,14 +4,14 @@ Rails.application.routes.draw do
   resources :public  
   resources :posts
   resources :properties
-
+  
+  # get "/compte" => "pages#compte", as: :compte
+  
   get "/contact" => "pages#contact", as: :contact
 
   get "/feature" => "pages#feature", as: :feature
 
   get "/for_sale" => "pages#for_sale", as: :for_sale
-
-  get "/for_rent" => "pages#for_rent", as: :for_rent  
 
   get "/advertise" => "pages#advertise", as: :advertise
 

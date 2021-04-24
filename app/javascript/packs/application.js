@@ -26,8 +26,6 @@ global.$ = global.jQuery = jQuery
 window.$ = window.jQuery = jQuery
 
 
-require("bootstrap");
-
 import toastr from 'toastr';
   toastr.options = {
     progressBar: true
@@ -35,11 +33,14 @@ import toastr from 'toastr';
 global.toastr = toastr;
 
 require("./includes/properties");
+require("bootstrap");
+import 'mapbox-gl/dist/mapbox-gl.css';
+import { initMapbox } from '../plugins/init_mapbox';
 
+   initMapbox();
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
-  // initSelect2();
 });

@@ -2,12 +2,18 @@ class PropertiesController < ApplicationController
   before_action :set_property, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :update, :destroy]
   before_action :set_sidebar, except: [:show]
+  before_action :set_login, only: [:index]
 
   def index
-    if current_user.admin?
-      @properties = Property.all
-    else
-      @properties = current_user.properties.all
+     
+     @properties = Property.geocoded
+    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    @markers = @properties.geocoded.map do |property|
+      {
+        lat: property.latitude,
+        lng: property.longitude,
+        infowindow: render_to_string(partial: "info_window", locals: { property: property })
+      }
     end
   end
 
@@ -74,6 +80,14 @@ class PropertiesController < ApplicationController
   end
 
   private
+
+  def set_login
+     if current_user.admin?
+      @properties = Property.all
+    else
+      @properties = current_user.properties.all
+    end
+  end
 
   def set_property
     @property = Property.find(params[:id])

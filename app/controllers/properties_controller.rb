@@ -2,12 +2,21 @@ class PropertiesController < ApplicationController
   before_action :set_property, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :update, :destroy]
   before_action :set_sidebar, except: [:show]
-  before_action :set_login, only: [:index]
 
   def index
-     
-     @properties = Property.geocoded
-    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    if current_user.admin?
+      @properties = Property.all
+    else
+      @properties = current_user.properties.all
+    end
+  end
+
+  def show
+    @user = @property.user
+    @agent_properties = Property.where(user_id: @user.id).where.not(id: @property.id)
+
+    @properties = Property.where.not(latitude: nil, longitude: nil)
+    # the `geocoded` scope filters only property with coordinates (latitude & longitude)
     @markers = @properties.geocoded.map do |property|
       {
         lat: property.latitude,
@@ -15,11 +24,6 @@ class PropertiesController < ApplicationController
         infowindow: render_to_string(partial: "info_window", locals: { property: property })
       }
     end
-  end
-
-  def show
-    @user = @property.user
-    @agent_properties = Property.where(user_id: @user.id).where.not(id: @property.id)
   end
 
   def new
@@ -81,14 +85,6 @@ class PropertiesController < ApplicationController
 
   private
 
-  def set_login
-     if current_user.admin?
-      @properties = Property.all
-    else
-      @properties = current_user.properties.all
-    end
-  end
-
   def set_property
     @property = Property.find(params[:id])
   end
@@ -98,6 +94,6 @@ class PropertiesController < ApplicationController
   end
 
   def property_params
-    params.require(:property).permit(:name, :address, :price, :rooms, :bathrooms, :details, :parking_spaces, :photo, :for_sale, :status, :available_date)
+    params.require(:property).permit(:name, :address, :longitude, :latitude, :price, :rooms, :bathrooms, :details, :parking_spaces, :photo, :for_sale, :status, :available_date)
   end
 end

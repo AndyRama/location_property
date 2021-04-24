@@ -12,21 +12,19 @@ body {
 }
 
 #feature-banner .jumbotron { 
-  background: image-url("feature-home.jpg") no-repeat center center;
+  background: image-url("banner-feature.jpg") no-repeat center center;
   background-size: cover ;
-  height: 440px;
 }
 
 #sale-banner .jumbotron { 
-  background: image-url("sale-home.jpg") no-repeat center center;
+  background: image-url("banner-sale.jpg") no-repeat center center;
   background-size: cover ;
-  height: 440px;
 }
 
 #home-banner .jumbotron { 
   background: image-url("banner-home.jpg") no-repeat center center;
   background-size: cover ;
-  height: 440px;
+  height: 400px;
 }
 
 #blog-banner .jumbotron {

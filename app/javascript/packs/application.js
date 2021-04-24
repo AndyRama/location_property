@@ -33,7 +33,6 @@ import toastr from 'toastr';
 global.toastr = toastr;
 
 require("./includes/properties");
-require("bootstrap");
 
 import { initMapbox } from '../plugins/init_mapbox';
 import 'mapbox-gl/dist/mapbox-gl.css';

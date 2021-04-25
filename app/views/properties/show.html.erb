@@ -73,11 +73,14 @@
         <div class="row">
           <div class="col"> 
             <p class="h3 mr-auto"><%= @property.name %><button class="btn btn-outline-info ml-5 mt-3 mb-3">Booking now</button></p> 
-            <p class="h5">Property Description</p>
+            <p class="h4"> Teasing for card description</p>
+            <p>"<%=@property.intro %>"</p>
+            <p class="h4">Property description </p>
               <div id="prop-details" class="">
                 <%= simple_format @property.details %>
               </div>  
               <button class="btn btn-outline-info mt-3 mb-3" id="toggleDetails">Show more</button>  
+              
             <p class="mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate incidunt ipsum ducimus illum? Atque eveniet voluptate rerum minima odit eligendi quasi in. Incidunt esse sunt, corrupti amet mollitia veritatis dicta?</p>
             <% if @property.for_sale %>
               <p class="mt-5">* This rate is based on a 30 year mortgage, after paying an initial 10% down payment. Shorter term mortgage would require a higher monthly repayment</p>

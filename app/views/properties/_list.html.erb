@@ -3,7 +3,7 @@
     <div class="property border">
       <%= link_to property_path(property) do %>
         <div class="property-thumb" style="background-image: url(<%= property_thumbnail_url(property) %>)"></div>
-           <div class="property-summary p-3">
+          <div class="property-summary p-3">
             <h3 class="h5"><%= link_to property.name, property_path(property), class: "text-dark" %></h3> 
             <span class= "mr-2">
               <%= property.rooms %> 
@@ -19,12 +19,12 @@
             </span>
           </div>
           <div>
+            <p><%= property.intro %></p>  
             <span class="mt-2">
               <i class="fas fa-home text-muted ml-1"></i>          
-              <%= property.address %>
-            </span>
-          </div>
-        </div>
+              <%= property.address%>
+            </span> 
+          </div>      
       <% end %>      
     </div>  
   </div>

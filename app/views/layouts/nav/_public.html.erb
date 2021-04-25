@@ -8,17 +8,17 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <% if user_signed_in? %>
-              <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
-            <% else %>
-              <a class="nav-link" aria-current="page" href="/">Home</a>
-            <% end %>   
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/for_sale">For Sale</a>
+          <% if user_signed_in? %>
+            <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
+          <% else %>
+            <a class="nav-link" aria-current="page" href="/">Home</a>
+          <% end %>   
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/feature">Feature</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/for_sale">For Sale</a>
         </li>
         <li class="nav-item">
           <%= link_to "Blog", blog_path, class: "nav-link" %>        
@@ -36,8 +36,8 @@
         <% if user_signed_in? %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-secondary float-sm-right" %> 
         <% else %>        
-          <%= link_to "Log In", new_user_session_path, class:"btn btn-secondary mr-2 float-sm-right"%>
-          <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success float-sm-right" %>
+          <%= link_to "Log In", new_user_session_path, id:"btn-login", class:"btn btn-secondary mr-2 float-sm-right"%>
+          <%= link_to "Sign Up", new_user_registration_path, id:"btn-Sign", class: "btn btn-success float-sm-right" %>
         <% end %>
       </ul>
     </div>

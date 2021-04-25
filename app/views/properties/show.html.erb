@@ -74,7 +74,7 @@
           <div class="col"> 
             <p class="h3 mr-auto"><%= @property.name %><button class="btn btn-outline-info ml-5 mt-3 mb-3">Booking now</button></p> 
             <p class="h4"> Teasing for card description</p>
-            <p>"<%=@property.intro %>"</p>
+            <p>"<%= @property.intro %>"</p>
             <p class="h4">Property description </p>
               <div id="prop-details" class="">
                 <%= simple_format @property.details %>
@@ -111,3 +111,4 @@
   </div>
 </section>
 <%=  render "properties/send_email_modal",agent: @agent  %>
+

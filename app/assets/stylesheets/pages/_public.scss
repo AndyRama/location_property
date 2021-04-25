@@ -11,6 +11,11 @@ body {
  margin-bottom: 5px;
 }
 
+#post-banner .jumbotron { 
+  background: image-url("banner-post.jpg") no-repeat center center;
+  background-size: cover ;
+}
+
 #feature-banner .jumbotron { 
   background: image-url("banner-feature.jpg") no-repeat center center;
   background-size: cover ;

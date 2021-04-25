@@ -34,8 +34,8 @@ global.toastr = toastr;
 
 require("./includes/properties");
 
+import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
-
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 

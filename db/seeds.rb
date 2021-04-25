@@ -7,9 +7,6 @@ print " Création echouée: 'X'"
 
 puts "\n\n Création de 1 Utilisateurs"
 
-User.destroy_all
-Property.destroy_all
-
 user1 = User.new(first_name:"ando",last_name:"alain",email:"andrew@gmail.com",password: "Pbxk1064",url: nil, admin: true, image: nil, company:"A2RSII",number:"0679554022" ,details: "",cover_image: nil)
 
 puts "\n\n Création d'une image pour profil Utilisateurs"

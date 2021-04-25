@@ -1,5 +1,8 @@
 <div class="container">
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="logo">
+      <%= image_tag "logo.jpg" %>
+    </div>
     <a class="navbar-brand" href="/">LocationProperty</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -29,9 +32,6 @@
         <li class="nav-item">
           <a class="nav-link" href="/contact">Contact</a>
         </li>
-        <%# <li class="nav-item">
-          <a class="nav-link" href="/profile/4">Compte</a>
-        </li> %>
       </ul>
         <% if user_signed_in? %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-secondary float-sm-right" %> 
@@ -42,5 +42,4 @@
       </ul>
     </div>
   </nav>
-
 </div>

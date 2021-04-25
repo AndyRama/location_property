@@ -4,17 +4,6 @@ class Property < ApplicationRecord
 
   geocoded_by :address
   after_validation :geocode
-  
-  # validates :name, presence: true
-  # validates :address, presence: true
-  # validates :status, presence: true
-  # validates :price, presence: true
-  # validates :rooms, presence: true
-  # validates :bathrooms, presence: true
-  # validates :parking_spaces, presence: true
-  # validates :for_sale, presence: true
-  validates :user_id, presence: true
-  # validates :details, presence: true
 
   scope :latest, -> { order created_at: :desc }
 

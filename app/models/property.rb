@@ -1,6 +1,8 @@
 class Property < ApplicationRecord
   belongs_to :user
   has_one_attached :photo
+  has_one_attached :image_int
+  has_one_attached :image_ext
 
   # Geocode adr => latitude,longitude
 

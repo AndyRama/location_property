@@ -8,7 +8,7 @@
 </main>
 
 <div class="container">
-  <%= cl_image_tag url_for(@post.image), width: 600, class: "float-right mb-4 ml-4" if @post.image.present? %>
+  <%= cl_image_tag url_for(@post.image), width: 500, class: "float-right mb-4 ml-4" if @post.image.present? %>
   <%= simple_format @post.body %>
   <p><%= link_to " View latest blog posts", blog_path %></p>
 </div>

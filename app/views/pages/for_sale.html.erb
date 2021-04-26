@@ -7,16 +7,16 @@
   </div>
 </main>
 <section id="sale-properties" class="mb-4" >
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h2 class=" mb-4 mt-4"></h2>
-        </div>
-      </div>
-      <div class="row">
-        <%= render "properties/list", properties: @properties.for_sale %>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class=" mb-4 mt-4"></h2>
       </div>
     </div>
-    <hr>
+    <div class="row">
+      <%= render "properties/list", properties: @properties.for_sale %>
+    </div>
   </div>
-  </section>
+  <hr>
+  <%= render "layouts/footer" %>
+</section>

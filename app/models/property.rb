@@ -27,7 +27,7 @@ class Property < ApplicationRecord
   validates :intro, presence: true 
 
   # Scope properties
-  
+
   scope :latest, -> { order created_at: :desc }
   scope :sold, -> { where(for_sale: true, status: "sold") }
   scope :for_sale, -> { where(for_sale: true, status: "available") }

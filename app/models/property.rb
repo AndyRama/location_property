@@ -7,7 +7,7 @@ class Property < ApplicationRecord
   geocoded_by :address
   after_validation :geocode
   
-  # validation pour le formulaire
+  # validation pour le formulaire creation d'une propriété
 
   validates :name, presence: true
   validates :address, presence: true
@@ -22,10 +22,9 @@ class Property < ApplicationRecord
   validates :details, presence: true
   validates :intro, presence: true 
 
-  # Scope sur les propriétés
-
+  # Scope
+  
   scope :latest, -> { order created_at: :desc }
-
   scope :sold, -> { where(for_sale: true, status: "sold") }
   scope :for_sale, -> { where(for_sale: true, status: "available") }
   scope :leased, -> { where(for_sale: false, status: "leased") }

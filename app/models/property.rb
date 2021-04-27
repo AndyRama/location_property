@@ -21,7 +21,6 @@ class Property < ApplicationRecord
   validates :rooms, presence: true
   validates :bathrooms, presence: true
   validates :parking_spaces, presence: true
-
   validates :available_date, presence: true
   validates :details, presence: true
   validates :intro, presence: true 

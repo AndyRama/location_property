@@ -21,7 +21,7 @@ class Property < ApplicationRecord
   validates :rooms, presence: true
   validates :bathrooms, presence: true
   validates :parking_spaces, presence: true
-  validates :for_sale, presence: true
+
   validates :available_date, presence: true
   validates :details, presence: true
   validates :intro, presence: true 
@@ -29,6 +29,7 @@ class Property < ApplicationRecord
   # Scope properties
 
   scope :latest, -> { order created_at: :desc }
+
   scope :sold, -> { where(for_sale: true, status: "sold") }
   scope :for_sale, -> { where(for_sale: true, status: "available") }
   scope :leased, -> { where(for_sale: false, status: "leased") }

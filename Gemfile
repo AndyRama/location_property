@@ -29,8 +29,9 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'devise'
+gem 'pundit'
 
-#image upload to Amazon S3
+#image upload 
 gem 'carrierwave', "0.10.0"
 gem 'fog', '~> 1.37.0'
 

@@ -4,10 +4,11 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
 
 Location Property platform build using Ruby on Rails 6. 
 
+Adresse :"https://location-property-andy.herokuapp.com"
+
 # [🔗 View Deployed Version](https://location-property-andy.herokuapp.com)
 
-            user: ando@gmail.com   pwd: 42KgrDYiewMgySx
-            user: recruteur@gmail.com   pwd: Pbxk1064
+user: ando@gmail.com   pwd: 42KgrDYiewMgySx            user: recruteur@gmail.com   pwd: Pbxk1064
 
 ## Main features:
 
@@ -36,22 +37,6 @@ I also added some responsive css to make our platform mobile / tablet / iPad fri
   Node SASS
   CSS Animations
   Flexbox
-  
-
-## Feature
-  
-  en dev:
-  device    : authentification  
-  pundit    : autorisation (en cours d'implementationn)
-  geocode   : translation  des adresses en coordonées (lat/lng) pour affichage sur la carte 
-  
-  api :
-  cloudinary: photos
-  Mapbox    : carte iteractive ( en cours)
- 
-  prod:
-  adresse :"https://location-property-andy.herokuapp.com"
-  heroku    : deploiement
 
 ## The Screenshots
 
@@ -62,8 +47,4 @@ I also added some responsive css to make our platform mobile / tablet / iPad fri
 ![alt text](https://github.com/AndyRama/location_property/blob/master/app/assets/images/Propertypage.png?raw=true)
 
 ![alt text](https://github.com/AndyRama/location_property/blob/master/app/assets/images/AgencyList.png?raw=true)
-
-
-
-
 

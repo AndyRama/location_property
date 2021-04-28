@@ -15,10 +15,6 @@ class PagesController < ApplicationController
     @properties = Property.latest
   end
 
-  def compte
-  # @user = User.id
-  end
-
   def contact
   end
 end

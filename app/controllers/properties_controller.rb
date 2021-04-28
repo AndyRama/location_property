@@ -2,7 +2,7 @@ class PropertiesController < ApplicationController
   before_action :set_property, only: %i[show edit update destroy]
   before_action :authenticate_user!, only: %i[new create update destroy]
   before_action :set_sidebar, except: [:show]
-  authorize @property
+  # authorize @property
 
   
   def index
@@ -96,6 +96,6 @@ class PropertiesController < ApplicationController
   end
 
   def property_params
-    params.require(:property).permit(:name, :address, :intro, :price, :rooms, :bathrooms, :details, :parking_spaces, :photo, :image_ext, :image_int, :for_sale, :status, :available_date)
+    params.require(:property).permit%i[name address intro price rooms bathrooms details parking_spaces photo image_ext image_int for_sale status available_date]
   end
 end

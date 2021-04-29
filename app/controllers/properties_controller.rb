@@ -4,7 +4,7 @@ class PropertiesController < ApplicationController
   before_action :set_sidebar, except: [:show]
   # authorize @property
 
-  def index
+def index
     if current_user.admin?
       @properties = Property.all
     else
@@ -95,6 +95,6 @@ class PropertiesController < ApplicationController
   end
 
   def property_params
-    params.require(:property).permit %i[name address intro price rooms bathrooms details parking_spaces photo image_ext image_int for_sale status available_date]
+    params.require(:property).permit(:name, :address, :intro, :price, :rooms, :bathrooms, :details, :parking_spaces, :photo, :image_ext, :image_int, :for_sale, :status, :available_date)
   end
 end

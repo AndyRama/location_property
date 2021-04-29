@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :properties
   has_one_attached :image
   has_one_attached :cover_image
-  
+
   # validation pour le formulaire d'inscription utilisateur
 
   validates :first_name, presence: true

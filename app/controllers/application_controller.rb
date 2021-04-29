@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     @show_sidebar = true if user_signed_in?
-    @properties = current_user.properties.all if user_signed_in? 
+    @properties = current_user.properties.all if user_signed_in?
 
     # For additional fields in app/views/devise/registrations/new.html.erb
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[first_name last_name image cover_image])

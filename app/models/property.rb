@@ -23,7 +23,7 @@ class Property < ApplicationRecord
   validates :parking_spaces, presence: true
   validates :available_date, presence: true
   validates :details, presence: true
-  validates :intro, presence: true 
+  validates :intro, presence: true
 
   # Scope properties
 

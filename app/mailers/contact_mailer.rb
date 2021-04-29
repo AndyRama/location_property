@@ -1,5 +1,4 @@
 class ContactMailer < ApplicationMailer
-  
   def email_agent agent_id, first_name, last_name, email, message
     @agent_id = agent_id
     @first_name = first_name
@@ -7,8 +6,6 @@ class ContactMailer < ApplicationMailer
     @email = email
     @message = message
 
-    if @agent.present?
-      mail to: @agent.email, message: "You have a new contact from Location Property."
-    end
+    mail to: @agent.email, message: "You have a new contact from Location Property." if @agent.present?
   end
 end

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'public#main'
+
   devise_for :users
 
   resources :public  
@@ -25,5 +27,4 @@ Rails.application.routes.draw do
 
   post "/agent/message" =>  "properties#email_agent", as: :email_agent
 
-  root to: 'public#main'
 end

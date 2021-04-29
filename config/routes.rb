@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :public  
   resources :posts
   resources :properties
-  
+
   get "/compte" => "pages#compte", as: :compte
   
   get "/contact" => "pages#contact", as: :contact

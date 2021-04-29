@@ -11,7 +11,7 @@
     <%= favicon_link_tag asset_path('logo.jpg') %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
   <body id="<%= controller.controller_name %>" class="<%=controller.action_name%> <%= "show-sidebar" if @show_sidebar.present? %> ">

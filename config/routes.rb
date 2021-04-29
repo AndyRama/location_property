@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root to: 'public#main'
-
   devise_for :users
 
   resources :public  

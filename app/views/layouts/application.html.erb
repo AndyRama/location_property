@@ -5,11 +5,13 @@
     <%# <meta name="viewport" content="width=device-width,initial-scale=1"> %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= favicon_link_tag asset_path('logo.jpg') %>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <%= stylesheet_pack_tag 'application' %>
+    <%= favicon_link_tag asset_path('logo.jpg') %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
   <body id="<%= controller.controller_name %>" class="<%=controller.action_name%> <%= "show-sidebar" if @show_sidebar.present? %> ">
@@ -17,8 +19,7 @@
     <% if @show_sidebar.nil? %> 
    <header>
       <%= render "layouts/nav/public"%>
-     
-      <%= yield %>  
+        <%= yield %>  
     </header>
    <% else %>
      <%= render "layouts/nav/dashboard"%>
@@ -35,6 +36,7 @@
 
     <% end %>
     <div id="notifications"><%= flash_notifications %></div>
-
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>feather.replace()</script>
   </body>
 </html>

@@ -8,7 +8,7 @@ class PublicController < ApplicationController
       redirect_to path, flash: { success: "Successfully signed in. Welcome to Location Property" } and return
     end
 
-    @properties = current_user.properties.all
+    @user = current_user
     @properties = Property.latest
     @posts = Post.latest
   end

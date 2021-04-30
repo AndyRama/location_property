@@ -1,6 +1,6 @@
 module ApplicationHelper
   def profile_picture(user)
-    thumb = user.image.attached? ? url_for(user.image) : "placeholder.png"
+    thumb = user.image.attached? ? url_for(user.image) : "placeholder.jpg"
     image_tag(thumb, width: 150, class: "profile_pic img-circle")
   end
 

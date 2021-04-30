@@ -3,7 +3,7 @@
     <div class="logo">
       <%= image_tag "logo.jpg" %>
     </div>
-    <a class="navbar-brand" href="#">LocationProperty</a>
+    <a class="navbar-brand" href="/home">LocationProperty</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,7 +14,7 @@
           <% if user_signed_in? %>
             <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
           <% else %>
-            <a class="nav-link" aria-current="page" href="/">Home</a>
+            <a class="nav-link" aria-current="page" href="/home">Home</a>
           <% end %>   
         </li>
         <li class="nav-item">

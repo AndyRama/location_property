@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   root to: 'public#main'
   devise_for :users
 
-  resources :public  
+  # resources :public  
   resources :posts
   resources :properties
+
+  get "/home" => "pages#home", as: :home
 
   get "/compte" => "pages#compte", as: :compte
   

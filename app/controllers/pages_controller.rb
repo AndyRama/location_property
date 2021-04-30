@@ -1,7 +1,9 @@
 class PagesController < ApplicationController
-  before_action :authenticate_user!, only: %i[home]
-
-  def home
+  # before_action :authenticate_user!, only: %i[home]
+  
+  def home 
+    @properties = Property.where(for_sale: true)
+    @properties = Property.latest
   end
 
   def avertise

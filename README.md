@@ -40,7 +40,7 @@ I also added some responsive css to make our platform mobile / tablet / iPad fri
 
 ## The Screenshots
 
-![alt text](https://github.com/AndyRama/location_property/blob/master/app/assets/images/Home_page.png?raw=true)
+![alt text](https://github.com/AndyRama/location_property/blob/master/app/assets/images/home_page.png?raw=true)
 
 ![alt text](https://github.com/AndyRama/location_property/blob/master/app/assets/images/feature_page.png?raw=true)
 

@@ -40,11 +40,15 @@ I also added some responsive css to make our platform mobile / tablet / iPad fri
 
 ## The Screenshots
 
-![alt text](https://github.com/AndyRama/location_property/blob/master/app/assets/images/HomeLocation.png?raw=true)
+![alt text](https://github.com/AndyRama/location_property/blob/master/app/assets/images/Home_page.png?raw=true)
 
-![alt text](https://github.com/AndyRama/location_property/blob/master/app/assets/images/Propertylist.png?raw=true)
+![alt text](https://github.com/AndyRama/location_property/blob/master/app/assets/images/feature_page.png?raw=true)
 
-![alt text](https://github.com/AndyRama/location_property/blob/master/app/assets/images/Propertypage.png?raw=true)
+![alt text](https://github.com/AndyRama/location_property/blob/master/app/assets/images/dashboardProprty.png?raw=true)
 
-![alt text](https://github.com/AndyRama/location_property/blob/master/app/assets/images/AgencyList.png?raw=true)
+![alt text](https://github.com/AndyRama/location_property/blob/master/app/assets/images/dashboardProfile.png?raw=true)
+
+![alt text](https://github.com/AndyRama/location_property/blob/master/app/assets/images/dashboardProfile2.png?raw=true)
+
+![alt text](https://github.com/AndyRama/location_property/blob/master/app/assets/images/Blog_page.png?raw=true)
 
